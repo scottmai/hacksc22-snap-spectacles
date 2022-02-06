@@ -35,7 +35,7 @@ function scan() {
         if (data) {
             var combinedResults = "";
             for (var i = 0; i < data.length; i++) {
-                var translation = script.Translate.api.translateWordToLang(data[i].name, 'chinese');
+                var translation = script.Translate.api.translateWordToLang(data[i].name, 'german');
                 if (translation) {
                     combinedResults += translation;
                     combinedResults += "\n";
