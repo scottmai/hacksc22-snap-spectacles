@@ -1,3 +1,4 @@
+// DO NOT OPEN THIS FILE IN LENS STUDIO
 global.languages = {
   english: ['Alarm clock', 'Apple', 'Arm', 'Bagel', 'Banana', 'Bathtub', 'Bed', 'Belt', 'Bicycle', 'Book', 'Bookcase', 'Boot', 'Bowl', 'Box', 'Calculator', 'Candle', 'Car', 'Cat', 'Chair', 'Clock', 'Coin', 'Computer keyboard', 'Cookie', 'Dog', 'Door', 'Egg (Food)', 'Flower', 'Foot', 'Fork', 'Guitar', 'Hand', 'Hat', 'Headphones', 'Lamp', 'Laptop', 'Microwave oven', 'Milk', 'Mobile phone', 'Paper towel', 'Pen', 'Pizza', 'Scissors', 'Sock', 'Stairs', 'Suit', 'Suitcase', 'Sunglasses', 'Table', 'Table tennis racket', 'Tennis ball', 'Tennis racket', 'Toilet paper', 'Tree', 'Violin', 'Zucchini'],
   spanish: ['Despertador', 'manzana', 'Brazo', 'Rosquilla', 'Plátano', 'Bañera', 'Cama', 'Cinturón', 'Bicicleta', 'Libro', 'Librero', 'Bota', 'cuenco', 'Caja', 'Calculadora', 'Vela', 'Carro', 'Gato', 'Silla', 'Reloj', 'Moneda', 'Teclado', 'Galleta', 'Perro', 'Puerta', 'Huevo (comida)', 'Flor', 'Pie', 'Tenedor', 'Guitarra', 'Mano', 'Sombrero', 'Auriculares', 'Lámpara', 'Ordenador portátil', 'Horno microondas', 'Leche', 'Teléfono móvil', 'Toalla de papel', 'Lápiz', 'Pizza', 'Tijeras', 'Calcetín', 'Escalera', 'Traje', 'Maleta', 'Gafas de sol', 'Mesa', 'Raqueta de tenis de mesa', 'Pelota de tenis', 'Raqueta de tenis', 'Papel higiénico', 'Árbol', 'Violín', 'Calabacín'],
@@ -13,10 +14,16 @@ function translateWordToLang(word, lang) {
   var translatedWord = "";
   if (lang in languages) {
     translatedWord = global.languages[lang][index];
+    if (translatedWord && lang === 'chinese') {
+      translatedWord += '\n(' + global.languages.pinyin[index] + ')';
+    }
   } else {
     print("Error: language not found");
   }
+  print(translatedWord);
   return translatedWord;
 }
+
+script.api.translateWordToLang = translateWordToLang;
 
 // print("Book in spanish is: " + translateWordToLang("Book", "spanish"));

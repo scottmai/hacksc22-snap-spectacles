@@ -8,6 +8,8 @@
 //@input Component.Text scanTypeText
 //@input bool printDebugLog
 
+//@input Component.ScriptComponent Translate
+
 initialize();
 
 function initialize() {
@@ -15,39 +17,44 @@ function initialize() {
     if (script.scanTypeText) {
         script.scanTypeText.text = script.scanType;
     }
-    
+
     if (!script.scanResult) {
         debugPrint("ERROR! No Scan Result Text input, please link a text component to the scanResult variable.");
         return false;
     }
-    
+
     scan();
 
     return true;
-    
+
 }
 
 function scan() {
-    
+
     global.getScanResults(script.scanType, function callback(data) {
         if (data) {
             var combinedResults = "";
-            for (var i=0;i<data.length;i++) {
-                combinedResults += data[i].name;
-                combinedResults += "\n";
-                debugPrint("Scan Result: " + data[i].name);
+            for (var i = 0; i < data.length; i++) {
+                var translation = script.Translate.api.translateWordToLang(data[i].name, 'chinese');
+                if (translation) {
+                    combinedResults += translation;
+                    combinedResults += "\n";
+                    combinedResults += data[i].name;
+                    combinedResults += "\n";
+                    debugPrint("Scan Result: " + data[i].name);
+                }
             }
             script.scanResult.text = combinedResults;
-            
+
         } else {
             debugPrint("Scan has No Result!");
         }
-        
+
         scan();
     }, function failureCallback(data) {
         debugPrint("Scan Failed! " + data);
         scan();
-    });        
+    });
 
 }
 
