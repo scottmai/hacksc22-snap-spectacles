@@ -22,7 +22,7 @@ global.behaviorSystem.addCustomTriggerResponse("setGameMode4", setGameMode4) //h
 
 
 function clearScreen() {
-    script.game.enabled = false;
+    // script.game.enabled = false;
     script.en.enabled = false;
     script.fr.enabled = false;
     script.sp.enabled = false;

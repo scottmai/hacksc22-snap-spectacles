@@ -17,6 +17,9 @@
 
 global.language = "English";
 global.gameState = 0;
+script.game.enabled = false;
+script.learn.enabled = false;
+script.home.enabled = true;
 global.behaviorSystem.addCustomTriggerResponse("StartGame", startGame);
 global.behaviorSystem.addCustomTriggerResponse("FrenchStart", startFrench);
 global.behaviorSystem.addCustomTriggerResponse("SpanishStart", startSpanish);
@@ -49,8 +52,8 @@ function startGame() {
     print("start English");
     global.gameState = 1;
     lang = "English";
-    script.game.enabled = true;
-    script.learn.enabled = false;
+    script.game.enabled = false;
+    script.learn.enabled = true;
     script.home.enabled = false;
     language = lang;
     clearScreen();
@@ -151,9 +154,9 @@ function startArabic() {
 }
 
 function clearScreen() {
-    script.game.enabled = false;
-    script.learn.enabled = true;
-    script.home.enabled = false;
+    // script.game.enabled = false;
+    // script.learn.enabled = true;
+    // script.home.enabled = false;
     script.en.enabled = false;
     script.fr.enabled = false;
     script.sp.enabled = false;
