@@ -9,12 +9,12 @@ global.behaviorSystem.addCustomTriggerResponse("setGameMode2", setGameMode2) //n
 global.behaviorSystem.addCustomTriggerResponse("setGameMode3", setGameMode3) //learn
 global.behaviorSystem.addCustomTriggerResponse("setGameMode4", setGameMode4) //home
 
-var gm = global.gamestate;
+var gm = global.gameState;
 var Home = script.home;
 var Learn = script.learn;
 var Game = script.game;
 
-function setGameMode(){
+function setGameMode() {
     print("game");
     gm = 2;
     gamestate = gm;
@@ -23,7 +23,7 @@ function setGameMode(){
     Game.enabled = true;
 }
 
-function setGameMode2(){ //next
+function setGameMode2() { //next
     print("next");
     gm = 2;
     gamestate = gm;
@@ -32,7 +32,7 @@ function setGameMode2(){ //next
     Game.enabled = true;
 }
 
-function setGameMode3(){ //learn mode
+function setGameMode3() { //learn mode
     print("learn");
     gm = 1;
     gamestate = gm;
@@ -41,7 +41,7 @@ function setGameMode3(){ //learn mode
     Game.enabled = false;
 }
 
-function setGameMode4(){ //home 
+function setGameMode4() { //home 
     print("home");
     gm = 0;
     gamestate = gm;
