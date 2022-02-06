@@ -1,13 +1,12 @@
 // -----JS CODE-----
-//@input int gameMode
 //import all scenes (home, game, learn) and enable 
 //@input SceneObject game
 //@input SceneObject learn
 //@input SceneObject home
 
-global.behaviorSystem.addCustomTriggerResponse("setGameMode", setGameMode);
+global.behaviorSystem.addCustomTriggerResponse("setGameMode", setGameMode)
 
-var gm = script.gameMode;
+var gm = global.gamestate;
 var Home = script.home;
 var Learn = script.learn;
 var Game = script.game;
