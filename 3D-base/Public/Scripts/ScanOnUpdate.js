@@ -35,12 +35,13 @@ function scan() {
         if (data) {
             var combinedResults = "";
             for (var i = 0; i < data.length; i++) {
-                var translation = script.Translate.api.translateWordToLang(data[i].name, 'german');
+                var word = data[i].name
+                var translation = script.Translate.api.translateWordToLang(word, 'german');
                 if (translation) {
                     combinedResults += translation;
                     combinedResults += "\n";
-                    combinedResults += data[i].name;
-                    combinedResults += "\n";
+                    // combinedResults += word;
+                    // combinedResults += "\n";
                     debugPrint("Scan Result: " + data[i].name);
                 }
             }
