@@ -15,7 +15,7 @@ initialize();
 
 function scanAllowed(b) {
     script.scanObject.enabled = b;
-    script.waitingScreen.enabled = !b;
+    script.waitingScreen.enabled = false;
 }
 
 function scan() {
