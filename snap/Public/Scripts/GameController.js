@@ -6,7 +6,7 @@
 //@input Component.ScriptComponent Translate
 //@input Component.Text findABlank 
 
-script.words = ['Guitar', 'Computer keyboard', 'Glasses', 'Bottle', 'Drink', 'Laptop']
+script.words = ['Guitar', 'Glasses', 'Bottle', 'Drink', 'Laptop']
 
 script.word = "";
 

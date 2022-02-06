@@ -17,6 +17,9 @@ global.languages = {
 
 function translateWordToLang(word, lang) {
   //find index of the target eng word in the target lang
+  if (!lang) {
+    lang = "spanish";
+  }
   lang = lang.toLowerCase()
   var index = global.languages.english.indexOf(word);
   var translatedWord = "";
