@@ -14,10 +14,6 @@ function initialize() {
 initialize();
 
 function scanAllowed(b) {
-//    return true;
-//    for (var i=0;i<script.scanObjects.length;i++) {
-//        script.scanObjects[i].enabled = b;
-//    }
     script.scanObject.enabled = b;
     script.waitingScreen.enabled = !b;
 }
