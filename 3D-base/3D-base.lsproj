@@ -3,7 +3,7 @@
     "document_id": "zGBACx2pcgHBHBEn87wC",
     "original_document_id": "hiTob49408u5oU5qnuLS",
     "version": "29",
-    "lastChanged": "1644159833315",
+    "lastChanged": "1644160915981",
     "preview": "icon.png",
     "videoPreview": "preview.mp4",
     "videoPreviewUpdateTime": "",
@@ -1858,7 +1858,11 @@
                 "136": "1644155391557830:256847",
                 "137": "1644159559310545:2781237",
                 "138": "1644159561629845:2805261",
-                "139": "1644159563706213:2829835"
+                "139": "1644159563706213:2829835",
+                "140": "1644160681868357:3381920",
+                "141": "1644160684208004:3407694",
+                "142": "1644160686107457:3434012",
+                "143": "1644160687973650:3460900"
             }
         },
         "LayerComponent": {
@@ -3763,7 +3767,7 @@
                     },
                     {
                         "k": "26609",
-                        "v": "01bd4efeabfd6022294e7fbeb5fa3023"
+                        "v": "261592236475a3ddc201bcefc7064218"
                     },
                     {
                         "k": "26610",
@@ -4887,7 +4891,7 @@
                     },
                     {
                         "k": "27079",
-                        "v": "5c13c301ff85278b29c11f279ec623f5"
+                        "v": "4391bf1185aec1ff263d595d285ca36b"
                     },
                     {
                         "k": "27081",
@@ -4967,7 +4971,7 @@
                     },
                     {
                         "k": "27103",
-                        "v": "c3d58127e3aab7e7350e7bb08bcf1ac0"
+                        "v": "d3b05a13eb2661eb00c764f6341d1435"
                     },
                     {
                         "k": "27104",
@@ -5011,31 +5015,31 @@
                     },
                     {
                         "k": "27114",
-                        "v": "675e63478286475e6abee1fe2676547e"
+                        "v": "b7818b831dd9fd08b2c52c5af651737c"
                     },
                     {
                         "k": "27115",
-                        "v": "f38bd81a144c0db58ce1d8286d64f7d0"
+                        "v": "c41403445a4417ce91522bd8ea616739"
                     },
                     {
                         "k": "27116",
-                        "v": "23510f6bb020fa9a2c36d20b034a8d1e"
+                        "v": "b25ff52cc438a763b4fa0d6a0ed31580"
                     },
                     {
                         "k": "27117",
-                        "v": "ac7765c7ef945d97f9dbf8f5a8eef7e5"
+                        "v": "2977aac3b7bda89d25099765e5f3446d"
                     },
                     {
                         "k": "27118",
-                        "v": "1101d3319c354d1c1ef9f6408c0ec75f"
+                        "v": "f4d9961d2ef87253100620bb52c6f8ac"
                     },
                     {
                         "k": "27119",
-                        "v": "a8776c7cf4b32520adf38bffd45bc530"
+                        "v": "72af46c8fb6501670253537216b3bb0c"
                     },
                     {
                         "k": "27120",
-                        "v": "22e19a2f6b4f20e4e53d7e0dae070990"
+                        "v": "e562b1fbcf07ab9f85355a30305b24b4"
                     },
                     {
                         "k": "27121",
@@ -5263,7 +5267,7 @@
                     },
                     {
                         "k": "27177",
-                        "v": "a3a6dc83d1d6032b41e12494588942f3"
+                        "v": "a9e0a0014fafa56d8e3b6da912efbdd5"
                     },
                     {
                         "k": "27266",
@@ -5303,7 +5307,7 @@
                     },
                     {
                         "k": "27332",
-                        "v": "5700ccf4ade3c8b67eb3459570690431"
+                        "v": "d9f07ae3e00b25c1317019225eda151c"
                     },
                     {
                         "k": "27333",
@@ -5345,33 +5349,33 @@
                 "publicState": {
                     "tree": {
                         "isFolder": "true",
-                        "lastModified": "2022-02-06T06:52:28",
+                        "lastModified": "2022-02-06T07:12:14",
                         "name": "Public",
-                        "hash": "0e6a14da7a00e9ef6af04ce27537191b",
+                        "hash": "dc75d3077ff28fcb880b1abd4f57e701",
                         "children": [
                             {
                                 "isFolder": "true",
                                 "lastModified": "2022-02-06T05:47:22",
                                 "name": "3D Models",
-                                "hash": "3455a50c492a1622c0b1f613138ca1b7",
+                                "hash": "5d8e0c52cd7289b37e304d40e06fcda4",
                                 "children": [
                                     {
                                         "isFolder": "true",
                                         "lastModified": "2022-02-06T05:47:22",
                                         "name": "Bitmoji Food Pack Resources",
-                                        "hash": "2a9d36849771592ee3efce0d4e21063a",
+                                        "hash": "5adab7a0ec0611b2439ead1297c69b5b",
                                         "children": [
                                             {
                                                 "isFolder": "true",
                                                 "lastModified": "2022-02-06T05:47:22",
                                                 "name": "Meshes",
-                                                "hash": "30c7bbba87fb986309e2957ae1961ba9",
+                                                "hash": "4cdb99cf82864a01fc653768bea5030b",
                                                 "children": [
                                                     {
                                                         "isFolder": "true",
                                                         "lastModified": "2022-02-06T05:47:22",
                                                         "name": "sandwich",
-                                                        "hash": "c7acb1351b6bd55823a5359ac83a124c",
+                                                        "hash": "cac46d98518206267e035695e922cc81",
                                                         "children": [
                                                             {
                                                                 "isFolder": "true",
@@ -5404,15 +5408,15 @@
                                                             },
                                                             {
                                                                 "isFolder": "true",
-                                                                "lastModified": "2022-02-06T06:43:37",
+                                                                "lastModified": "2022-02-06T07:03:49",
                                                                 "name": "Material",
-                                                                "hash": "04d51246d1c8ac6cab2546f1923004e3",
+                                                                "hash": "8e35701749fdff4bd2cce1b3681b2fcd",
                                                                 "children": [
                                                                     {
                                                                         "isFolder": "false",
-                                                                        "lastModified": "2022-02-06T06:43:37",
+                                                                        "lastModified": "2022-02-06T07:03:49",
                                                                         "name": "sandwich.lsmat",
-                                                                        "hash": "9cca3af71cc7c2cc4de41e0fd8ee3a3c",
+                                                                        "hash": "1101d3319c354d1c1ef9f6408c0ec75f",
                                                                         "children": ""
                                                                     },
                                                                     {
@@ -5437,7 +5441,7 @@
                                                         "isFolder": "true",
                                                         "lastModified": "2022-02-06T05:47:22",
                                                         "name": "steak",
-                                                        "hash": "cdd6433c27e8ab14bc24025f0767645b",
+                                                        "hash": "35db32b0c632145e57db3f5f2ad2990e",
                                                         "children": [
                                                             {
                                                                 "isFolder": "true",
@@ -5463,15 +5467,15 @@
                                                             },
                                                             {
                                                                 "isFolder": "true",
-                                                                "lastModified": "2022-02-06T06:43:37",
+                                                                "lastModified": "2022-02-06T07:03:49",
                                                                 "name": "Material",
-                                                                "hash": "aed8ada653ba9a09b2b2162b2ccf34a2",
+                                                                "hash": "a7cf68dd8e04b9a76adb43d355a20e57",
                                                                 "children": [
                                                                     {
                                                                         "isFolder": "false",
-                                                                        "lastModified": "2022-02-06T06:43:37",
+                                                                        "lastModified": "2022-02-06T07:03:49",
                                                                         "name": "steak.lsmat",
-                                                                        "hash": "e639d81ca8ec0d7f87e0c380ff2053a4",
+                                                                        "hash": "a8776c7cf4b32520adf38bffd45bc530",
                                                                         "children": ""
                                                                     },
                                                                     {
@@ -5496,7 +5500,7 @@
                                                         "isFolder": "true",
                                                         "lastModified": "2022-02-06T05:47:22",
                                                         "name": "dip",
-                                                        "hash": "dedffba732db6a21b2eb2ca4c9c9a119",
+                                                        "hash": "9501d55b929a63c2a3fe636f84e2c79f",
                                                         "children": [
                                                             {
                                                                 "isFolder": "true",
@@ -5522,15 +5526,15 @@
                                                             },
                                                             {
                                                                 "isFolder": "true",
-                                                                "lastModified": "2022-02-06T06:43:36",
+                                                                "lastModified": "2022-02-06T07:03:49",
                                                                 "name": "Material",
-                                                                "hash": "f7606826b53afd700b19a9de4f2b3d38",
+                                                                "hash": "71e9c5d4cdf5a8ea3bdf3a578b6d7323",
                                                                 "children": [
                                                                     {
                                                                         "isFolder": "false",
-                                                                        "lastModified": "2022-02-06T06:43:36",
+                                                                        "lastModified": "2022-02-06T07:03:49",
                                                                         "name": "dip.lsmat",
-                                                                        "hash": "2ff84614e624793a86320aa7ef6975c9",
+                                                                        "hash": "23510f6bb020fa9a2c36d20b034a8d1e",
                                                                         "children": ""
                                                                     },
                                                                     {
@@ -5555,7 +5559,7 @@
                                                         "isFolder": "true",
                                                         "lastModified": "2022-02-06T05:47:22",
                                                         "name": "salad_leaf",
-                                                        "hash": "f8eb46b3203fb9fd329817310f4a8890",
+                                                        "hash": "5b64bc63287d0ef833eba31a735be691",
                                                         "children": [
                                                             {
                                                                 "isFolder": "true",
@@ -5581,15 +5585,15 @@
                                                             },
                                                             {
                                                                 "isFolder": "true",
-                                                                "lastModified": "2022-02-06T06:43:37",
+                                                                "lastModified": "2022-02-06T07:03:49",
                                                                 "name": "Material",
-                                                                "hash": "8f6c2f237aa25a633ed1bffd7ceda53a",
+                                                                "hash": "fb78bcfa8590137c8310dfda52ae653b",
                                                                 "children": [
                                                                     {
                                                                         "isFolder": "false",
-                                                                        "lastModified": "2022-02-06T06:43:37",
+                                                                        "lastModified": "2022-02-06T07:03:49",
                                                                         "name": "salad_leaf.lsmat",
-                                                                        "hash": "5d39921aefeb45ddeb52243cbbe3a922",
+                                                                        "hash": "ac7765c7ef945d97f9dbf8f5a8eef7e5",
                                                                         "children": ""
                                                                     },
                                                                     {
@@ -5614,7 +5618,7 @@
                                                         "isFolder": "true",
                                                         "lastModified": "2022-02-06T05:47:22",
                                                         "name": "cookie",
-                                                        "hash": "ee29352ba4dd88298d8804da0f04e26e",
+                                                        "hash": "a1382077e63a9833c3f3f80770aae5f2",
                                                         "children": [
                                                             {
                                                                 "isFolder": "true",
@@ -5640,15 +5644,15 @@
                                                             },
                                                             {
                                                                 "isFolder": "true",
-                                                                "lastModified": "2022-02-06T06:43:36",
+                                                                "lastModified": "2022-02-06T07:03:49",
                                                                 "name": "Material",
-                                                                "hash": "ab4b15395d6455a75cc22f8922da579c",
+                                                                "hash": "3bfe02f13fb7942ac2fabf73f7323028",
                                                                 "children": [
                                                                     {
                                                                         "isFolder": "false",
-                                                                        "lastModified": "2022-02-06T06:43:36",
+                                                                        "lastModified": "2022-02-06T07:03:49",
                                                                         "name": "cookie.lsmat",
-                                                                        "hash": "b29bf0aa7e42933592ab932b2e22ef2f",
+                                                                        "hash": "f38bd81a144c0db58ce1d8286d64f7d0",
                                                                         "children": ""
                                                                     },
                                                                     {
@@ -5673,7 +5677,7 @@
                                                         "isFolder": "true",
                                                         "lastModified": "2022-02-06T05:47:22",
                                                         "name": "cereal_box",
-                                                        "hash": "48168d4300ff233b2e95056ee31df598",
+                                                        "hash": "faa5c3d9df94cf94ceb663a7895141f8",
                                                         "children": [
                                                             {
                                                                 "isFolder": "true",
@@ -5699,15 +5703,15 @@
                                                             },
                                                             {
                                                                 "isFolder": "true",
-                                                                "lastModified": "2022-02-06T06:43:36",
+                                                                "lastModified": "2022-02-06T07:03:48",
                                                                 "name": "Material",
-                                                                "hash": "13d7f0696211a4c358b09bd8a93b9b83",
+                                                                "hash": "a7046a106701831567bec338c5585661",
                                                                 "children": [
                                                                     {
                                                                         "isFolder": "false",
-                                                                        "lastModified": "2022-02-06T06:43:36",
+                                                                        "lastModified": "2022-02-06T07:03:48",
                                                                         "name": "cereal_box.lsmat",
-                                                                        "hash": "0a579659b5f830673df66ad044e39b78",
+                                                                        "hash": "675e63478286475e6abee1fe2676547e",
                                                                         "children": ""
                                                                     },
                                                                     {
@@ -5732,7 +5736,7 @@
                                                         "isFolder": "true",
                                                         "lastModified": "2022-02-06T05:47:22",
                                                         "name": "tomato",
-                                                        "hash": "e5cb0314ddf244bcee72225bca1f360f",
+                                                        "hash": "2d68c84707ff0f4a8f21570a3963ef0d",
                                                         "children": [
                                                             {
                                                                 "isFolder": "true",
@@ -5758,15 +5762,15 @@
                                                             },
                                                             {
                                                                 "isFolder": "true",
-                                                                "lastModified": "2022-02-06T06:43:37",
+                                                                "lastModified": "2022-02-06T07:03:49",
                                                                 "name": "Material",
-                                                                "hash": "07b21b876f2eaf9aeba2c33bc6bda3d2",
+                                                                "hash": "0e3400c11b2f5b27121bcca976c91540",
                                                                 "children": [
                                                                     {
                                                                         "isFolder": "false",
-                                                                        "lastModified": "2022-02-06T06:43:37",
+                                                                        "lastModified": "2022-02-06T07:03:49",
                                                                         "name": "tomato.lsmat",
-                                                                        "hash": "e23ab7aa99c2ace987b7d56568cb3846",
+                                                                        "hash": "22e19a2f6b4f20e4e53d7e0dae070990",
                                                                         "children": ""
                                                                     },
                                                                     {
@@ -5964,29 +5968,29 @@
                             },
                             {
                                 "isFolder": "true",
-                                "lastModified": "2022-02-06T06:43:36",
+                                "lastModified": "2022-02-06T07:03:48",
                                 "name": "Materials",
-                                "hash": "bf3928c68f17a4a77493061e8bd830fc",
+                                "hash": "6fd77efd551f6420209deeb196440d23",
                                 "children": [
                                     {
                                         "isFolder": "false",
-                                        "lastModified": "2022-02-06T06:43:35",
+                                        "lastModified": "2022-02-06T07:03:48",
                                         "name": "Graph Transparent.lsmat",
-                                        "hash": "aef7a15db71b892017350cf87cd1da75",
+                                        "hash": "01bd4efeabfd6022294e7fbeb5fa3023",
                                         "children": ""
                                     },
                                     {
                                         "isFolder": "false",
-                                        "lastModified": "2022-02-06T06:43:36",
+                                        "lastModified": "2022-02-06T07:03:48",
                                         "name": "Listening Indicator Material.lsmat",
-                                        "hash": "4953cbee8156b944a5bb4273dd1ffa4e",
+                                        "hash": "c3d58127e3aab7e7350e7bb08bcf1ac0",
                                         "children": ""
                                     },
                                     {
                                         "isFolder": "false",
-                                        "lastModified": "2022-02-06T06:43:36",
+                                        "lastModified": "2022-02-06T07:03:48",
                                         "name": "Soft Occluder.lsmat",
-                                        "hash": "e984c513f4064c2a507ab90634f497d1",
+                                        "hash": "5c13c301ff85278b29c11f279ec623f5",
                                         "children": ""
                                     },
                                     {
@@ -6056,16 +6060,16 @@
                             },
                             {
                                 "isFolder": "false",
-                                "lastModified": "2022-02-06T06:52:28",
+                                "lastModified": "2022-02-06T07:12:14",
                                 "name": "Script.js",
-                                "hash": "a3a6dc83d1d6032b41e12494588942f3",
+                                "hash": "a9e0a0014fafa56d8e3b6da912efbdd5",
                                 "children": ""
                             },
                             {
                                 "isFolder": "true",
-                                "lastModified": "2022-02-06T06:42:47",
+                                "lastModified": "2022-02-06T07:14:11",
                                 "name": "Scripts",
-                                "hash": "e6af3ceefd936c14ec72c0e7f8caf363",
+                                "hash": "fe97f6c8bf6c15578bd80bc9a1523689",
                                 "children": [
                                     {
                                         "isFolder": "false",
@@ -6227,9 +6231,9 @@
                                     },
                                     {
                                         "isFolder": "false",
-                                        "lastModified": "2022-02-06T06:42:47",
+                                        "lastModified": "2022-02-06T07:14:11",
                                         "name": "Translate.js",
-                                        "hash": "5700ccf4ade3c8b67eb3459570690431",
+                                        "hash": "d9f07ae3e00b25c1317019225eda151c",
                                         "children": ""
                                     },
                                     {
@@ -8063,7 +8067,7 @@
         "InspectorController": {
             "selection": {
                 "objects": [
-                    "1644159563706213:2829835"
+                    "1644159561629845:2805261"
                 ]
             }
         },
