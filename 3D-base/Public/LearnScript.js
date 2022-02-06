@@ -1,7 +1,7 @@
 // -----JS CODE-----
 
 global.language = "English";
-global.gameState = 0;
+global.gameState = 1;
 global.behaviorSystem.addCustomTriggerResponse("StartGame", startGame);
 global.behaviorSystem.addCustomTriggerResponse("FrenchStart", startFrench);
 global.behaviorSystem.addCustomTriggerResponse("SpanishStart", startSpanish);
@@ -13,50 +13,50 @@ global.behaviorSystem.addCustomTriggerResponse("GoHome", goHome);
 
 var lang = script.language;
 
-function goHome(){
+function goHome() {
     print("goHome");
-    gameState = 0;
+    global.gameState = 0;
     lang = "English";
     language = lang;
 }
 
 
-function startGame(){
+function startGame() {
     print("start English");
-    gameState = 1;
+    global.gameState = 1;
     lang = "English";
     language = lang;
 }
 
-function startFrench(){
+function startFrench() {
     print("start French");
-    gameState = 1;
+    global.gameState = 1;
     lang = "French";
     language = lang;
 }
 
-function startSpanish(){
+function startSpanish() {
     print("start Spanish");
-    gameState = 1;
+    global.gameState = 1;
     lang = "Spanish";
     language = lang;
 }
 
-function startChinese(){
+function startChinese() {
     print("start Chinese");
-    gameState = 1;
+    global.gameState = 1;
     lang = "Chinese";
     language = lang;
 }
 
-function startHunt(){
+function startHunt() {
     print("start hunting");
-    gameState = 2;
+    global.gameState = 2;
     language = lang;
 }
 
-script.createEvent("UpdateEvent").bind(function(){
-    if(startGame){
+script.createEvent("UpdateEvent").bind(function () {
+    if (startGame) {
         //start the game
     }
 });

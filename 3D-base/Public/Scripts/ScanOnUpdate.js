@@ -37,7 +37,6 @@ function scan() {
             for (var i = 0; i < data.length; i++) {
                 var word = data[i].name
                 var translation = script.Translate.api.translateWordToLang(word, 'german');
-                print("gamestate" + global.gameState)
                 if (translation && global.gameState === 1) {
                     combinedResults += translation;
                     combinedResults += "\n";
