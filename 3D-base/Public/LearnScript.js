@@ -32,42 +32,42 @@ global.behaviorSystem.addCustomTriggerResponse("GoHome", goHome);
 
 var lang = script.language;
 
-function goHome(){
+function goHome() {
     print("goHome");
-    gameState = 0;
+    global.gameState = 0;
     lang = "English";
     language = lang;
     WriteScreen();
 }
 
 
-function startGame(){
+function startGame() {
     print("start English");
-    gameState = 1;
+    global.gameState = 1;
     lang = "English";
     language = lang;
     clearScreen();
 }
 
-function startFrench(){
+function startFrench() {
     print("start French");
-    gameState = 1;
+    global.gameState = 1;
     lang = "French";
     language = lang;
     clearScreen();
 }
 
-function startSpanish(){
+function startSpanish() {
     print("start Spanish");
-    gameState = 1;
+    global.gameState = 1;
     lang = "Spanish";
     language = lang;
     clearScreen();
 }
 
-function startChinese(){
+function startChinese() {
     print("start Chinese");
-    gameState = 1;
+    global.gameState = 1;
     lang = "Chinese";
     language = lang;
     clearScreen();
@@ -143,10 +143,11 @@ function WriteScreen(){
 }
 
 
-function startHunt(){
+function startHunt() {
     print("start hunting");
-    gameState = 2;
+    global.gameState = 2;
     language = lang;
     clearScreen();
 }
+
 

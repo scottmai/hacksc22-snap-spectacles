@@ -20,6 +20,7 @@ global.behaviorSystem.addCustomTriggerResponse("setGameMode2", setGameMode2) //n
 global.behaviorSystem.addCustomTriggerResponse("setGameMode3", setGameMode3) //learn
 global.behaviorSystem.addCustomTriggerResponse("setGameMode4", setGameMode4) //home
 
+
 function clearScreen(){
     script.en.enabled = false;
     script.fr.enabled = false;
@@ -47,44 +48,41 @@ function WriteScreen(){
 }
 
 var gm = global.gameState;
+
 var Home = script.home;
 var Learn = script.learn;
 var Game = script.game;
 
-function setGameMode(){
+function setGameMode() {
     print("game");
-    gm = 2;
-    gamestate = gm;
+    global.gameState = 2;
     Home.enabled = false;
     Learn.enabled = false;
     Game.enabled = true;
     clearScreen();
 }
 
-function setGameMode2(){ //next
+function setGameMode2() { //next
     print("next");
-    gm = 2;
-    gamestate = gm;
+    global.gameState = 2;
     Home.enabled = false;
     Learn.enabled = false;
     Game.enabled = true;
     clearScreen();
 }
 
-function setGameMode3(){ //learn mode
+function setGameMode3() { //learn mode
     print("learn");
-    gm = 1;
-    gamestate = gm;
+    global.gameState = 1;
     Home.enabled = false;
     Learn.enabled = true;
     Game.enabled = false;
     clearScreen();
 }
 
-function setGameMode4(){ //home 
+function setGameMode4() { //home 
     print("home");
-    gm = 0;
-    gamestate = gm;
+    global.gameState = 0;
     Home.enabled = true;
     Learn.enabled = false;
     Game.enabled = false;
