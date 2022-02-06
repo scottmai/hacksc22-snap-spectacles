@@ -9,6 +9,7 @@
 //@input bool printDebugLog
 
 //@input Component.ScriptComponent Translate
+//@input Component.ScriptComponent GameController
 
 initialize();
 
@@ -36,7 +37,13 @@ function scan() {
             var combinedResults = "";
             for (var i = 0; i < data.length; i++) {
                 var word = data[i].name
-                var translation = script.Translate.api.translateWordToLang(word, 'german');
+                if (word === 'Clothing') {
+                    continue;
+                }
+                if (global.gameState === 2) {
+                    script.GameController.api.onScan(word);
+                }
+                var translation = script.Translate.api.translateWordToLang(word, global.language);
                 if (translation && global.gameState === 1) {
                     combinedResults += translation;
                     combinedResults += "\n";
@@ -64,3 +71,4 @@ function debugPrint(message) {
         print(message);
     }
 }
+

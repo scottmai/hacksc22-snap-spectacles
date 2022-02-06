@@ -1,4 +1,7 @@
 // -----JS CODE-----
+//@input SceneObject game
+//@input SceneObject learn
+//@input SceneObject home
 //@input Component.Image en
 //@input Component.Image fr
 //@input Component.Image sp
@@ -9,6 +12,7 @@
 //@input Component.Image ge
 //@input Component.Image ja
 //@input Component.Image ar
+
 
 
 global.language = "English";
@@ -27,14 +31,14 @@ global.behaviorSystem.addCustomTriggerResponse("StartHunt", startHunt);
 global.behaviorSystem.addCustomTriggerResponse("GoHome", goHome);
 
 
-
-
-
 var lang = script.language;
 
 function goHome() {
     print("goHome");
     global.gameState = 0;
+    script.game.enabled = false;
+    script.learn.enabled = false;
+    script.home.enabled = true;
     lang = "English";
     language = lang;
     WriteScreen();
@@ -45,6 +49,9 @@ function startGame() {
     print("start English");
     global.gameState = 1;
     lang = "English";
+    script.game.enabled = true;
+    script.learn.enabled = false;
+    script.home.enabled = false;
     language = lang;
     clearScreen();
 }
@@ -52,6 +59,9 @@ function startGame() {
 function startFrench() {
     print("start French");
     global.gameState = 1;
+    script.game.enabled = false;
+    script.learn.enabled = true;
+    script.home.enabled = false;
     lang = "French";
     language = lang;
     clearScreen();
@@ -60,6 +70,9 @@ function startFrench() {
 function startSpanish() {
     print("start Spanish");
     global.gameState = 1;
+    script.game.enabled = false;
+    script.learn.enabled = true;
+    script.home.enabled = false;
     lang = "Spanish";
     language = lang;
     clearScreen();
@@ -67,56 +80,80 @@ function startSpanish() {
 
 function startChinese() {
     print("start Chinese");
+    script.game.enabled = false;
+    script.learn.enabled = true;
+    script.home.enabled = false;
     global.gameState = 1;
     lang = "Chinese";
     language = lang;
     clearScreen();
 }
-function startKorean(){
+function startKorean() {
     print("start Korean");
     gameState = 1;
+    script.game.enabled = false;
+    script.learn.enabled = true;
+    script.home.enabled = false;
     lang = "Korean";
     language = lang;
     clearScreen();
 }
-function startRussian(){
+function startRussian() {
     print("start Russian");
     gameState = 1;
     lang = "Russian";
+    script.game.enabled = false;
+    script.learn.enabled = true;
+    script.home.enabled = false;
     language = lang;
     clearScreen();
 }
-function startItalian(){
+function startItalian() {
     print("start Italian");
     gameState = 1;
     lang = "Italian";
     language = lang;
+    script.game.enabled = false;
+    script.learn.enabled = true;
+    script.home.enabled = false;
     clearScreen();
 }
-function startGerman(){
+function startGerman() {
     print("start German");
     gameState = 1;
+    script.game.enabled = false;
+    script.learn.enabled = true;
+    script.home.enabled = false;
     lang = "German";
     language = lang;
     clearScreen();
 }
-function startJapanese(){
+function startJapanese() {
     print("start Japanese");
     gameState = 1;
     lang = "Japanese";
+    script.game.enabled = false;
+    script.learn.enabled = true;
+    script.home.enabled = false;
     language = lang;
     clearScreen();
 }
-function startArabic(){
+function startArabic() {
     print("start Arabic");
     gameState = 1;
+    script.game.enabled = false;
+    script.learn.enabled = true;
+    script.home.enabled = false;
     print(gameState);
     lang = "Arabic";
     language = lang;
     clearScreen();
 }
 
-function clearScreen(){
+function clearScreen() {
+    script.game.enabled = false;
+    script.learn.enabled = true;
+    script.home.enabled = false;
     script.en.enabled = false;
     script.fr.enabled = false;
     script.sp.enabled = false;
@@ -129,7 +166,7 @@ function clearScreen(){
     script.ar.enabled = false;
 }
 
-function WriteScreen(){
+function WriteScreen() {
     script.en.enabled = true;
     script.fr.enabled = true;
     script.sp.enabled = true;
@@ -146,6 +183,9 @@ function WriteScreen(){
 function startHunt() {
     print("start hunting");
     global.gameState = 2;
+    script.game.enabled = true;
+    script.learn.enabled = false;
+    script.home.enabled = false;
     language = lang;
     clearScreen();
 }

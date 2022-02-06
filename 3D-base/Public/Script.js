@@ -21,7 +21,8 @@ global.behaviorSystem.addCustomTriggerResponse("setGameMode3", setGameMode3) //l
 global.behaviorSystem.addCustomTriggerResponse("setGameMode4", setGameMode4) //home
 
 
-function clearScreen(){
+function clearScreen() {
+    script.game.enabled = false;
     script.en.enabled = false;
     script.fr.enabled = false;
     script.sp.enabled = false;
@@ -34,7 +35,7 @@ function clearScreen(){
     script.ar.enabled = false;
 }
 
-function WriteScreen(){
+function WriteScreen() {
     script.en.enabled = true;
     script.fr.enabled = true;
     script.sp.enabled = true;
