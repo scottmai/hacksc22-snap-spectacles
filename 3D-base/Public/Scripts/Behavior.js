@@ -18,7 +18,7 @@
 //  global.behaviorSystem.sendCustomTrigger(triggerName)
 //
 // Add a callback function to call when the global custom trigger named "triggerName" is sent
-//  global.behaviorSystem.addCustomTriggerResponse(triggerName, callback)
+  //global.behaviorSystem.addCustomTriggerResponse("StartGame", startGame)
 //
 // Remove a callback function for the global custom trigger named "triggerName"
 //  global.behaviorSystem.removeCustomTriggerResponse(triggerName, callback)
