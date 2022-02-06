@@ -1,5 +1,5 @@
 // Behavior.js
-// Version: 0.5.0
+// Version: 0.6.0
 // Event: Lens Initialized
 // Description: Configure a trigger and response in the inspector UI. No scripting required.
 //
@@ -24,7 +24,7 @@
 //  global.behaviorSystem.removeCustomTriggerResponse(triggerName, callback)
 // -----------------
 
-//@input string triggeringEventType = "TouchEvent" {"widget": "combobox", "values": [{"value": "TouchEvent", "label": "Touch Event"}, {"value": "FaceEvent", "label": "Face Event"}, {"value": "OnAwake", "label": "On Awake"}, {"value": "TurnOnEvent", "label": "On Start"}, {"value": "OnEnabled", "label": "On Enabled"}, {"value": "OnDisabled", "label": "On Disabled"}, {"value": "UpdateEvent", "label": "Update"}, {"value": "LateUpdateEvent", "label": "Late Update"}, {"value": "CameraFrontEvent", "label": "Front Camera"}, {"value": "CameraBackEvent", "label": "Back Camera"}, {"value": "InteractionEvent", "label": "Interaction Event"}, {"value": "animationEnd", "label": "Animation End"}, {"value": "tweenEnd", "label": "Tween End"}, {"value": "lookingAt", "label": "Looking At"}, {"value": "boundsCheck", "label": "Bounds Check"}, {"value": "distanceCheck", "label": "Distance Check"}, {"value": "markerTrackingEvent", "label": "Marker Tracking Event"}, {"value": "objectTrackingEvent", "label": "Object Tracking Event"}, {"value": "objectTracking3DEvent", "label": "Object Tracking 3D Event"}, {"value": "landmarkerEvent", "label": "Landmarker Event"}, {"value": "machineLearningEvent", "label": "Machine Learning Event"}, {"value": "recordingStart", "label": "Recording Start"}, {"value": "onCustomTrigger", "label": "On Custom Trigger"}, {"value": "physicsColliderEvent", "label": "Physics Collider Event"}, {"value": "None", "label": "None"}], "label": "Trigger"}
+//@input string triggeringEventType = "TouchEvent" {"widget": "combobox", "values": [{"value": "TouchEvent", "label": "Touch Event"}, {"value": "FaceEvent", "label": "Face Event"}, {"value": "OnAwake", "label": "On Awake"}, {"value": "TurnOnEvent", "label": "On Start"}, {"value": "OnEnabled", "label": "On Enabled"}, {"value": "OnDisabled", "label": "On Disabled"}, {"value": "UpdateEvent", "label": "Update"}, {"value": "LateUpdateEvent", "label": "Late Update"}, {"value": "CameraFrontEvent", "label": "Front Camera"}, {"value": "CameraBackEvent", "label": "Back Camera"}, {"value": "InteractionEvent", "label": "Interaction Event"}, {"value": "animationEnd", "label": "Animation End"}, {"value": "tweenEnd", "label": "Tween End"}, {"value": "lookingAt", "label": "Looking At"}, {"value": "boundsCheck", "label": "Bounds Check"}, {"value": "distanceCheck", "label": "Distance Check"}, {"value": "markerTrackingEvent", "label": "Marker Tracking Event"}, {"value": "objectTrackingEvent", "label": "Object Tracking Event"}, {"value": "objectTracking3DEvent", "label": "Object Tracking 3D Event"}, {"value": "landmarkerEvent", "label": "Landmarker Event"}, {"value": "machineLearningEvent", "label": "Machine Learning Event"}, {"value": "recordingStart", "label": "Recording Event"}, {"value": "onCustomTrigger", "label": "On Custom Trigger"}, {"value": "physicsColliderEvent", "label": "Physics Collider Event"}, {"value": "None", "label": "None"}], "label": "Trigger"}
 //@input string touchEventEventType = "TapEvent" {"showIf": "triggeringEventType", "showIfValue": "TouchEvent", "values": [{"value": "TapEvent", "label": "Tap"}, {"value": "TouchStartEvent", "label": "Touch Start"}, {"value": "TouchMoveEvent", "label": "Touch Move"}, {"value": "TouchEndEvent", "label": "Touch End"}], "widget": "combobox", "label": "Event Type"}
 //@input Component.BaseMeshVisual touchEventTouchTarget {"showIf": "triggeringEventType", "showIfValue": "TouchEvent", "label": "Touch Target"}
 
@@ -104,6 +104,8 @@
 
 //@input Component.MLComponent machineLearningEventMlComponent {"showIf": "triggeringEventType", "showIfValue": "machineLearningEvent", "label": "ML Component"}
 
+//@input string recordingEventEventType = "SnapRecordStartEvent" {"showIf": "triggeringEventType", "showIfValue": "recordingStart", "values": [{"value": "SnapRecordStartEvent", "label": "Recording Start"}, {"value": "SnapRecordStopEvent", "label": "Recording Stop"}, {"value": "SnapImageCaptureEvent", "label": "Image Capture"}], "widget": "combobox", "label": "Event Type"}
+
 //@ui {"showIf": "triggeringEventType", "showIfValue": "onCustomTrigger", "widget": "group_start", "label": "Custom Trigger"}
 //@input string onCustomTriggerTriggerName {"showIf": "onCustomTriggerUseList", "showIfValue": false, "label": "Trigger Name"}
 //@input string[] onCustomTriggerTriggerNames {"showIf": "onCustomTriggerUseList", "showIfValue": true, "label": "Trigger Names"}
@@ -136,7 +138,7 @@
 //@input float triggerDelay {"label": "Delay Time"}
 //@ui {"widget": "group_end"}
 //@ui {"widget": "separator"}
-//@input string responseType = "None" {"widget": "combobox", "values": [{"value": "None", "label": "None"}, {"value": "textureAnimation", "label": "Animate Image"}, {"value": "animateMesh", "label": "Animate Mesh"}, {"value": "playSound", "label": "Play Sound"}, {"value": "playVideo", "label": "Play Video"}, {"value": "setEnabled", "label": "Set Enabled"}, {"value": "setParent", "label": "Set Parent"}, {"value": "setColor", "label": "Set Color"}, {"value": "setTexture", "label": "Set Texture"}, {"value": "setText", "label": "Set Text"}, {"value": "runTween", "label": "Run Tween"}, {"value": "setPosition", "label": "Set Position"}, {"value": "setRotation", "label": "Set Rotation"}, {"value": "setScale", "label": "Set Scale"}, {"value": "setScreenPosition", "label": "Set Screen Position"}, {"value": "setScreenRotation", "label": "Set Screen Rotation"}, {"value": "setScreenSize", "label": "Set Screen Size"}, {"value": "setBlendshapes", "label": "Set Blendshapes"}, {"value": "setMaterialParameter", "label": "Set Material/VFX Parameter"}, {"value": "setTouchBlocking", "label": "Set Touch Blocking"}, {"value": "showHint", "label": "Show Hint"}, {"value": "machineLearning", "label": "Machine Learning"}, {"value": "instantiatePrefab", "label": "Instantiate Prefab"}, {"value": "destroyObject", "label": "Destroy Object"}, {"value": "printMessage", "label": "Print Message"}, {"value": "callScriptAPI", "label": "Call Object API"}, {"value": "sendCustomTrigger", "label": "Send Custom Trigger"}, {"value": "physicsApplyForce", "label": "Physics Apply Force"}]}
+//@input string responseType = "None" {"widget": "combobox", "values": [{"value": "None", "label": "None"}, {"value": "textureAnimation", "label": "Animate Image"}, {"value": "animateMesh", "label": "Animate Mesh"}, {"value": "playSound", "label": "Play Sound"}, {"value": "playVideo", "label": "Play Video"}, {"value": "setEnabled", "label": "Set Enabled"}, {"value": "setParent", "label": "Set Parent"}, {"value": "setColor", "label": "Set Color"}, {"value": "setTexture", "label": "Set Texture"}, {"value": "setText", "label": "Set Text"}, {"value": "runTween", "label": "Run Tween"}, {"value": "setPosition", "label": "Set Position"}, {"value": "setRotation", "label": "Set Rotation"}, {"value": "setScale", "label": "Set Scale"}, {"value": "setScreenPosition", "label": "Set Screen Position"}, {"value": "setScreenRotation", "label": "Set Screen Rotation"}, {"value": "setScreenSize", "label": "Set Screen Size"}, {"value": "setBlendshapesV2", "label": "Set Blendshapes"}, {"value": "setMaterialParameter", "label": "Set Material/VFX Parameter"}, {"value": "setTouchBlocking", "label": "Set Touch Blocking"}, {"value": "showHint", "label": "Show Hint"}, {"value": "machineLearning", "label": "Machine Learning"}, {"value": "instantiatePrefab", "label": "Instantiate Prefab"}, {"value": "destroyObject", "label": "Destroy Object"}, {"value": "printMessage", "label": "Print Message"}, {"value": "callScriptAPI", "label": "Call Object API"}, {"value": "sendCustomTrigger", "label": "Send Custom Trigger"}, {"value": "physicsApplyForce", "label": "Physics Apply Force"}]}
 //@ui {"showIf": "responseType", "showIfValue": "textureAnimation", "widget": "group_start", "label": "Target"}
 //@input Asset.Texture animateImageAnimatedTexture {"showIf": "responseType", "showIfValue": "textureAnimation", "label": "Animated Texture"}
 //@input Component.MaterialMeshVisual animateImageVisualObject {"showIf": "responseType", "showIfValue": "textureAnimation", "label": "Visual Object"}
@@ -195,6 +197,7 @@
 
 //@input SceneObject setParentTarget {"showIf": "responseType", "showIfValue": "setParent", "label": "Target"}
 //@input SceneObject setParentNewParent {"showIf": "responseType", "showIfValue": "setParent", "label": "New Parent"}
+//@input bool setParentPreserveWorldTransform = false {"showIf": "responseType", "showIfValue": "setParent", "label": "Preserve World Transform"}
 
 //@ui {"showIf": "responseType", "showIfValue": "setColor", "widget": "group_start", "label": "Target"}
 //@input Component.MaterialMeshVisual setColorVisual {"showIf": "responseType", "showIfValue": "setColor", "label": "Visual"}
@@ -250,9 +253,9 @@
 //@input vec2 setScreenSizeOffsetsSize {"showIf": "setScreenSizeSizeType", "showIfValue": "Offsets Rect", "label": "Offsets Size"}
 //@ui {"showIf": "responseType", "showIfValue": "setScreenSize", "widget": "group_end"}
 
-//@input Component.BlendShapes setBlendshapesBlendshapes {"showIf": "responseType", "showIfValue": "setBlendshapes", "label": "Blendshapes"}
-//@input string setBlendshapesName {"showIf": "responseType", "showIfValue": "setBlendshapes", "label": "Name"}
-//@input float setBlendshapesWeight = 0 {"showIf": "responseType", "showIfValue": "setBlendshapes", "label": "Weight"}
+//@input Component.RenderMeshVisual setBlendshapesV2MeshVisual {"showIf": "responseType", "showIfValue": "setBlendshapesV2", "label": "Mesh Visual"}
+//@input string setBlendshapesV2Name {"showIf": "responseType", "showIfValue": "setBlendshapesV2", "label": "Name"}
+//@input float setBlendshapesV2Weight = 0 {"showIf": "responseType", "showIfValue": "setBlendshapesV2", "label": "Weight"}
 
 //@ui {"showIf": "responseType", "showIfValue": "setMaterialParameter", "widget": "group_start", "label": "Target"}
 //@input string setMaterialParameterTargetType = "Material" {"showIf": "responseType", "showIfValue": "setMaterialParameter", "values": [{"value": "Material", "label": "Material"}, {"value": "MeshVisual", "label": "MeshVisual"}, {"value": "VFX Asset", "label": "VFX Asset"}, {"value": "VFX Component", "label": "VFX Component"}], "widget": "combobox", "label": "Target Type"}
@@ -453,6 +456,14 @@
 
 //@input SceneObject physicsApplyForceObjectSpace {"showIf": "physicsApplyForceSpace", "showIfValue": "Local to Object", "label": "Object Space"}
 //@ui {"showIf": "responseType", "showIfValue": "physicsApplyForce", "widget": "group_end"}
+
+//@ui {"showIf": "responseType", "showIfValue": "setBlendshapes", "widget": "label", "label": "<font color='orange'>WARNING:</font>"}
+//@ui {"showIf": "responseType", "showIfValue": "setBlendshapes", "widget": "label", "label": "Set Blendshapes (Legacy) is Deprecated."}
+//@ui {"showIf": "responseType", "showIfValue": "setBlendshapes", "widget": "label", "label": "Please use Set Blendshapes instead."}
+
+//@input Component.BlendShapes setBlendshapesBlendshapes {"showIf": "responseType", "showIfValue": "setBlendshapes", "label": "Blendshapes"}
+//@input string setBlendshapesName {"showIf": "responseType", "showIfValue": "setBlendshapes", "label": "Name"}
+//@input float setBlendshapesWeight = 0 {"showIf": "responseType", "showIfValue": "setBlendshapes", "label": "Weight"}
 
 //@ui {"showIf": "responseType", "showIfValue": "animateSprite", "widget": "label", "label": "<font color='orange'>WARNING:</font>"}
 //@ui {"showIf": "responseType", "showIfValue": "animateSprite", "widget": "label", "label": "Animate Sprite is Deprecated."}
@@ -767,8 +778,8 @@ function doResponse() {
         case "setScreenSize":
             triggerSetScreenSize();
             break;
-        case "setBlendshapes":
-            triggerSetBlendshapes();
+        case "setBlendshapesV2":
+            triggerSetBlendshapesV2();
             break;
         case "setMaterialParameter":
             triggerSetMaterialParameter();
@@ -799,6 +810,9 @@ function doResponse() {
             break;
         case "physicsApplyForce":
             triggerPhysicsApplyForce();
+            break;
+        case "setBlendshapes":
+            triggerSetBlendshapes();
             break;
         case "animateSprite":
             debugPrint("Response type Animate Sprite is DEPRECATED.\nPlease use Animate Image instead.");
@@ -1117,9 +1131,7 @@ function setupMachineLearningEvent() {
 }
 
 function setupRecordingStart() {
-    whenValueBecomes(function() {
-        return global.scene.isRecording();
-    }, true, onTrigger, false);
+    script.createEvent(script.recordingEventEventType || "SnapRecordStartEvent").bind(onTrigger);
 }
 
 function setupOnCustomTrigger() {
@@ -1477,7 +1489,11 @@ function triggerSetEnabled() {
 
 function triggerSetParent() {
     var targetObj = (script.setParentTarget || script.getSceneObject());
-    targetObj.setParent(script.setParentNewParent || null);
+    if (script.setParentPreserveWorldTransform) {
+        targetObj.setParentPreserveWorldTransform(script.setParentNewParent || null);
+    } else {
+        targetObj.setParent(script.setParentNewParent || null);
+    }
 }
 
 function triggerSetColor() {
@@ -1619,12 +1635,12 @@ function triggerSetScreenSize() {
     }
 }
 
-function triggerSetBlendshapes() {
-    if (!script.setBlendshapesBlendshapes) {
-        debugPrint("Blendshapes must be set!");
+function triggerSetBlendshapesV2() {
+    if (!script.setBlendshapesV2MeshVisual) {
+        debugPrint("Mesh Visual must be set!");
         return;
     }
-    script.setBlendshapesBlendshapes.setBlendShape(script.setBlendshapesName, script.setBlendshapesWeight);
+    script.setBlendshapesV2MeshVisual.setBlendShapeWeight(script.setBlendshapesV2Name, script.setBlendshapesV2Weight);
 }
 
 function triggerSetMaterialParameter() {
@@ -2240,6 +2256,14 @@ function triggerPhysicsApplyForce() {
             body[velocityPropName] = forceToApply;
             break;
     }
+}
+
+function triggerSetBlendshapes() {
+    if (!script.setBlendshapesBlendshapes) {
+        debugPrint("Blendshapes must be set!");
+        return;
+    }
+    script.setBlendshapesBlendshapes.setBlendShape(script.setBlendshapesName, script.setBlendshapesWeight);
 }
 script.api.trigger = onTrigger;
 script.api.addTriggerResponse = function(callback) {
