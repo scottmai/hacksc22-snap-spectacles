@@ -1,7 +1,7 @@
 // -----JS CODE-----
 
 global.language = "English";
-global.gameState = 1;
+global.gameState = 0;
 global.behaviorSystem.addCustomTriggerResponse("StartGame", startGame);
 global.behaviorSystem.addCustomTriggerResponse("FrenchStart", startFrench);
 global.behaviorSystem.addCustomTriggerResponse("SpanishStart", startSpanish);
